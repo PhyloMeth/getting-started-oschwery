@@ -4,7 +4,7 @@
 
 GetHowManyTrees_exercise <- function(ntaxa=10) {
 	#ape can compute this for us.
-	result <- "__A FUNCTION FROM APE TO DO THIS__(ntaxa)__"
+	result <- howmanytrees(ntaxa, rooted = TRUE, binary = TRUE, labeled = TRUE, detail = FALSE)
 	return(result)	
 }
 
@@ -12,6 +12,6 @@ GetAlignment_exercise <- function() {
 	#Let's see where mafft is installed
 	print(system("which mafft"))
 	data(woodmouse)
-	result <- mafft(" __PUT SOMETHING HERE TO ALIGN__" ) #hint, look up one line
+	result <- mafft(woodmouse, method = "auto", maxiterate = 1000, op = 1.53, ep = 0.0) #hint, look up one line
 	return(result)
 }
